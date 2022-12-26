@@ -18,6 +18,11 @@ use App\Http\Controllers\ProductApiController;
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
+
 Route::get('/token', function () { return csrf_token(); });
 Route::get('/artisan/create',[ArtisanCommands::class,'generate']);
 Route::get('/artisan/delete',[ArtisanCommands::class,'delete']);
